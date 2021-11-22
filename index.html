@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html>
-
-<!--head中添加的是元数据，不会具体到页面中显示-->
-
+<html lang="en">
 <head>
     <!--指定网页允许的字符集，防止出现乱码-->
     <meta charset="utf-8">
@@ -16,108 +13,67 @@
     <title>HelloWorld</title>
     <link rel="stylesheet" href="helloWorld.css">
 </head>
-
+<body>
 <body class="blueBody">
-    <!--2号标题，即5号字体-->
-    <h1>js入门学习</h1>
+<!--2号标题，即5号字体-->
+<h1>哀民生之多艰</h1>
 
-    <!--添加一条横线-->
-    <hr>
+<!--添加一条横线-->
+<hr>
 
-    <!--段落标签p,会在段前添加换行-->
-    <p>学习目标：能够在网页中显示Hello World！</p>
+<!--段落标签p,会在段前添加换行-->
+<p>吃不了几顿饭了</p>
 
-    <!--超链接，可以设置超链接的标题属性-->
-    <!-- <a href="demo://android.study.diary/my_path?message=hello world!">打开app</a> -->
-    <a href="corpctrip://corp.ctrip.com/my_path?message=hello world!">打开携程商旅app</a>
-    <a href="htkjtrip://myhost/my_path?message=hello world!">打开航天科技app</a>
-    <a href="crec://myhost/my_path?message=hello world!">打开中铁商旅app</a>
+<!--超链接，可以设置超链接的标题属性-->
+<!-- <a href="demo://android.study.diary/my_path?message=hello world!">打开app</a> -->
+<!--<a href="corpctrip://corp.ctrip.com/my_path?message=hello world!">打开携程商旅app</a>-->
+<!--<a href="htkjtrip://myhost/my_path?message=hello world!">打开航天科技app</a>-->
+<!--<a href="crec://myhost/my_path?message=hello world!">打开中铁商旅app</a>-->
 
-    <!--两个br表示空一行-->
-    <br><br>
+<!--两个br表示空一行-->
+<br><br>
 
-    <b>加粗字体</b>
-    <i>斜体字</i>
-    <del>标记删除一段文字</del>
+<b>开水都治不了松松了</b>
+<br><br>
+<i>松门酒肉臭，路有冻死骨</i>
+<br><br>
+<del>曾经在实验室的时候松松多么真诚</del>
 
-    <!--添加换行-->
-    <br>
+<!--添加换行-->
+<br>
 
-    <em>什么是着重字</em>
-    <small>小号字有多小</small>
-    <strong>加重字又长啥样</strong>
-    <sub>下标</sub>
-    <sup>上标</sup>
-    <br>
-    <ins>插入字没见过</ins>
-    <span>输入一段正常的文字</span>
-    <u>和下划线有什么不一样</u>
+<div>
+    <button onclick="show()">松松何许人也</button>
+</div>
 
-    <!--引入一段js脚本-->
-    <script src="test.js"></script>
+<div>
+    <button onclick="crow()">松松价值几何</button>
+</div>
 
-    <div>
-        <button onclick="show()">显示弹窗</button>
-    </div>
 
-    <div>
-        <button onclick="crow()">测试按钮</button>
-    </div>
+<!--执行一段js脚本-->
+<script>
+    console.log("currentTime = " + new Date());
 
-    <div>
-        <button onclick="openUrl('https://www.nowcoder.com/test/question/done?tid=42686699&qid=22154#summary')">打开牛客网</button>
-    </div>
-
-    <div class="greenDiv">
-        <i>怎么设置间距啊</i>
-    </div>
-
-    <ul>
-        <li>click me</li>
-        <li>click me</li>
-        <li>click me</li>
-        <li>click me</li>
-    </ul>
-
-    <p id="demo">
-        <div class="centerDiv"
-            style="background-color: cadetblue;margin-left: 50px;margin-right: 50px;margin-top: 20px;margin-bottom: 20px;padding: 15px;text-align: center;">
-            <form id="my_form" onsubmit="return validateForm()" method="POST" target="id_iframe">
-                <div>
-                    <input type="number" id="number1" min="1"
-                        style="width: 200px;height: 150px; font-size: 50px;text-align: center;">
-                    <input type="number" id="number2" min="1"
-                        style="width: 200px;height: 150px; font-size: 50px;text-align: center;">
-                        <!-- 防止提交默认跳转事件，需要对onclick()返回false -->
-                    <input type="submit" value="最大公约数" style="width: 200px;height: 100px;font-size: 20px;"
-                        onclick="{greatCommonDivision();return false}">
-                </div>
-            </form>
-            <iframe id="id_iframe" name="my_frame" style="display: none;"></iframe>
-            <div style="padding: 30px; background-color: rosybrown;margin-top: 15px;">
-                <span id="result" style="font-size: 20px;"></span>
-            </div>
-        </div>
-
-    </p>
-
-    <p id="test"></p>
-
-    <!--执行一段js脚本-->
-    <script>
-        console.log("currentTime = " + new Date());
-
-        function validateForm() {
-            var x1 = document.forms["my_form"]["number1"].value;
-            var x2 = document.forms["my_form"]["number2"].value;
-            if (x1 == "" || x2 == "") {
-                alert("必须输入数");
-                return false;
-            }
-            // return true;
+    function validateForm() {
+        var x1 = document.forms["my_form"]["number1"].value;
+        var x2 = document.forms["my_form"]["number2"].value;
+        if (x1 == "" || x2 == "") {
+            alert("必须输入数");
+            return false;
         }
-    </script>
+        // return true;
+    }
+
+    function show(){
+        window.alert("大别山千年灵气孕育而出")
+    }
+
+    function crow(){
+        window.confirm("思想价值3个亿，家里油缸漫出来了")
+    }
+</script>
 
 </body>
-
+</body>
 </html>
