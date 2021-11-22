@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!--执行一段js脚本-->
+<script src="index.js"/>
+
 <head>
     <!--指定网页允许的字符集，防止出现乱码-->
     <meta charset="utf-8">
@@ -72,38 +76,6 @@
 </p>
 
 <img width="100%" height="600px" src="songsong.jpeg" alt="上海市还是松松最成功！"/>
-
-<!--执行一段js脚本-->
-<script>
-    console.log("currentTime = " + new Date());
-
-    function show() {
-        window.alert("大别山灵气孕育，千年出一个的人才")
-    }
-
-    function crow() {
-        window.confirm("思想价值3个亿，家里油缸都漫出来了")
-    }
-
-    function getResult() {
-        var form = document.getElementById("my_form");
-        var a = form['name1'].value;
-        var b = form['name2'].value;
-        if (a === '' || b === '' || a === b) {
-            window.alert("请输入你的名字")
-            return;
-        }
-
-        if (b !== '王劲松' && a !== '王劲松') {
-            document.getElementById("result").innerHTML = a + "比" + b + "优秀";
-        } else if (a === '王劲松') {
-            document.getElementById("result").innerHTML = b + "比" + a + "差十万百千里";
-        } else {
-            document.getElementById("result").innerHTML = a + "比" + b + "差十万百千里";
-        }
-        // console.log(a + "与" + b + "的最大公约数是" + result);
-    }
-</script>
 
 </body>
 </body>
