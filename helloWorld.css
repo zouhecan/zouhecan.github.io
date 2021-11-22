@@ -1,4 +1,7 @@
-body.blueBody {background-color:#b0c4de;padding-bottom: 50px;}
+body.blueBody {
+    background-color:#b0c4de;
+}
+
 h1 {background-color:red;text-align: center;}
 p.blueP {background-color:#e0ffff;}
 div.blueDiv {background-color:#b0c4de;}
@@ -11,12 +14,11 @@ div.greenDiv{
     text-align: center;
     margin: 50px;
     font-size: 32px;
+
 }
 div.centerDiv{
     background-color: hotpink;
     justify-items: center;
-    margin-left: 50px;
-    margin-right: 50px;
     padding-top: 15px;
     padding-bottom: 15px;
     margin-top: 150px;

@@ -50,27 +50,58 @@
     <button onclick="crow()">松松价值几何</button>
 </div>
 
+<p id="demo">
+<div class="centerDiv"
+     style="background-color: cadetblue;margin-left: 50px;margin-right: 50px;margin-top: 20px;margin-bottom: 20px;padding: 15px;text-align: center;">
+    <form id="my_form" onsubmit="return validateForm()" method="POST" target="id_iframe">
+        <div>
+            <input type="text" id="name1" placeholder="请在输入你的名字"
+                   style="width: 100%;height: 150px; font-size: 30px;text-align: center;">
+            <input type="text" id="name2" placeholder="王劲松" value="王劲松"
+                   style="width: 200px;height: 150px; font-size: 50px;text-align: center;">
+            <!-- 防止提交默认跳转事件，需要对onclick()返回false -->
+            <input type="submit" value="计算你跟松松的差距" style="width: 200px;height: 100px;font-size: 20px;"
+                   onclick="{getResult();return false}">
+        </div>
+    </form>
+    <iframe id="id_iframe" name="my_frame" style="display: none;"></iframe>
+    <div style="padding: 30px; background-color: rosybrown;margin-top: 15px;">
+        <span id="result" style="font-size: 20px;"></span>
+    </div>
+</div>
+</p>
+
+<img width="100%" height="600px" src="songsong.jpeg" alt="上海市还是松松最成功！"/>
 
 <!--执行一段js脚本-->
 <script>
     console.log("currentTime = " + new Date());
 
-    function validateForm() {
-        var x1 = document.forms["my_form"]["number1"].value;
-        var x2 = document.forms["my_form"]["number2"].value;
-        if (x1 == "" || x2 == "") {
-            alert("必须输入数");
-            return false;
+    function show() {
+        window.alert("大别山灵气孕育，千年出一个的人才")
+    }
+
+    function crow() {
+        window.confirm("思想价值3个亿，家里油缸都漫出来了")
+    }
+
+    function getResult() {
+        var form = document.getElementById("my_form");
+        var a = form['name1'].value;
+        var b = form['name2'].value;
+        if (a === '' || b === '' || a === b) {
+            window.alert("请输入你的名字")
+            return;
         }
-        // return true;
-    }
 
-    function show(){
-        window.alert("大别山千年灵气孕育而出")
-    }
-
-    function crow(){
-        window.confirm("思想价值3个亿，家里油缸漫出来了")
+        if (b !== '王劲松' && a !== '王劲松') {
+            document.getElementById("result").innerHTML = a + "比" + b + "优秀";
+        } else if (a === '王劲松') {
+            document.getElementById("result").innerHTML = b + "比" + a + "差十万百千里";
+        } else {
+            document.getElementById("result").innerHTML = a + "比" + b + "差十万百千里";
+        }
+        // console.log(a + "与" + b + "的最大公约数是" + result);
     }
 </script>
 
