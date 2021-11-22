@@ -22,3 +22,4 @@ function getResult() {
     } else {
         document.getElementById("result").innerHTML = a + "比" + b + "差十万百千里";
     }
+}
